@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserModule } from './pages/user/user.module';
 import { AdminGuard } from './guards/admin.guard';
 import { UserGuard } from './guards/user.guard';
+import { MainComponent } from './pages/main/main.component';
+import { AdminModule } from './pages/admin/admin.module';
 
 const routes: Routes = [
-
-
-
   {
-    path: 'user',
-    loadChildren: () => UserModule,
-    canActivate: [UserGuard]
+    path: '',
+    component:MainComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: () => AdminModule,
   },
   // {
   //   path: '**',

@@ -1,0 +1,66 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start">
+  <div fxFlex="80" fxLayout="row wrap" fxLayoutAlign="start start" class="mt-32">
+    <div
+      fxFlex="100"
+      fxLayoutGap="10"
+      fxLayout="row wrap"
+      fxLayoutAlign="start start"
+      [formGroup]="portalAddGroup"
+    >
+      <mat-form-field appearance="legacy">
+        <mat-label>Project Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>URL</mat-label>
+        <input matInput formControlName="url" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Corporate</mat-label>
+        <mat-select formControlName="corporate">
+          <mat-option *ngFor="let cor of corporateOption" [value]="cor">
+            {{ cor | uppercase }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Section</mat-label>
+        <input matInput placeholder="IT-SD" formControlName="section" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Owner</mat-label>
+        <input matInput formControlName="owner" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>Developer</mat-label>
+        <input matInput formControlName="developer" />
+      </mat-form-field>
+      <input
+        hidden
+        #fileUpload
+        type="file"
+        accept="image/*"
+        (change)="handleUpload(fileUpload.files)"
+      />
+      <button mat-raised-button (click)="fileUpload.click()" class="bg-green-300 text-sky-500 font-bold">
+        <div fxLayout="row wrap" fxLayoutAlign="center center">
+          <mat-icon class="mat-18">upload</mat-icon>
+          <span>Upload Logo</span>
+        </div>
+      </button>
+
+
+      <button
+        [disabled]="portalAddGroup.invalid"
+        mat-raised-button
+        (click)="handleSubmit()"
+        class="bg-green-300 text-sky-500 font-bold"
+      >
+        Submit
+      </button>
+      <div *ngIf="portalAddGroup.controls.logo.valid" fxFlex="auto" fxLayout="row wrap" fxLayoutAlign="start center" class="bg-white  p-3">
+        <img id="previewLogo" style="width: 500px; height: 500px" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,32 +1,58 @@
 @import url("./import.scss");
 
 @import "material-icons/iconfont/material-icons.scss";
-@import '@sweetalert2/theme-borderless/borderless.scss';
-html,
+@import "@sweetalert2/theme-borderless/borderless.scss";
+// @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap");
 body {
   height: 100%;
 }
 body {
   margin: 0;
+  background-image: url("./assets/Dark Blue Simple Dark Tech and Gaming Bio-Link Website.png");
+  background-size: 100%;
+  // background-position: center !important;
+  // background-repeat: repeat-y !important;
+  // background-size: cover !important;
+  // object-fit: cover !important;
+  // object-position: right !important;
 }
 * {
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  // font-family: 'Monomaniac One', sans-serif;
+  // font-family: "Yuji Syuku", serif;
 }
 
-.mat-form-field-wrapper {
-  padding-bottom: 10px !important;
+.mat-form-field-appearance-legacy .mat-form-field-label,
+input,
+.mat-select-value {
+  color: white !important;
 }
-.mat-form-field-appearance-fill .mat-form-field-flex {
-  padding: 0 !important;
+
+.mat-flat-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled{
+  background-color: rgba(255, 81, 81, 0.788);
+  color: white;
 }
-.mat-form-field {
-  font-size: 14px;
+.link{
+  cursor: pointer;
 }
-mat-label {
-  color: #4b72e6 ;
-  font-weight: 700;
-}
-mat-drawer-content{
-  background-color: #e6ecff;
-  border-radius: 2px;
-}
+
+
+// ::ng-deep .mat-form-field-wrapper {
+//   padding-bottom: 10px !important;
+//   color: white;
+// }
+// .mat-form-field-appearance-fill .mat-form-field-flex {
+//   padding: 0 !important;
+// }
+// .mat-form-field {
+//   font-size: 14px;
+// }
+// mat-label {
+//   color: #ffffff;
+//   font-weight: 700;
+// }
+// mat-drawer-content {
+//   background-color: #e6ecff;
+//   border-radius: 2px;
+// }

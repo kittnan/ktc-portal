@@ -14,6 +14,9 @@ import {
   NgxUiLoaderRouterModule,
   NgxUiLoaderHttpModule,
 } from 'ngx-ui-loader';
+import { MainComponent } from './pages/main/main.component';
+import { PortalComponent } from './pages/main/portal/portal.component';
+import { MenuComponent } from './pages/main/menu/menu.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: '#673ab7',
@@ -31,7 +34,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   gap: 5,
   logoPosition: 'center-center',
   logoSize: 200,
-  logoUrl: './assets/invioce_new2_load.png',
+  logoUrl: './assets/portalLOGO.png',
   masterLoaderId: 'master',
   overlayBorderRadius: '0',
   overlayColor: 'rgba(255,255,255,0.6)',
@@ -48,7 +51,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MainComponent, PortalComponent, MenuComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
