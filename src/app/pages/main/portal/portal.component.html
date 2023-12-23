@@ -26,13 +26,14 @@
           border-radius: 15px;
         "
         (click)="handleLink(data.url)"
+        [title]="data.name"
       >
         <img [src]="data.logo[0].path" style="width: 50px; height: 50px" />
         <span
           fxFlex="100"
           class="sub-text text-center font-bold text-uppercase text-blue-700 mt-1"
         >
-          {{ data.name }}
+          {{htmlName(data.name)}}
         </span>
       </div>
     </div>

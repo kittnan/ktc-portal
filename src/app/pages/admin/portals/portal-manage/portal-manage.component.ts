@@ -27,7 +27,6 @@ export class PortalManageComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     try {
       const resPortal: any = await lastValueFrom(this.$portal.get(new HttpParams()))
-      console.log("🚀 ~ resPortal:", resPortal)
       this.dataSource = new MatTableDataSource(resPortal.map((a: any, i: number) => {
         return {
           no: i + 1,
@@ -65,7 +64,6 @@ export class PortalManageComponent implements OnInit {
   }
 
   handleLink(data:any){
-    console.log(data);
     const dataToSend = data
 
     // Sending data while navigating to the destination component

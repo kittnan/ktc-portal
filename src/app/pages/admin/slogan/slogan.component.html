@@ -1,0 +1,71 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start">
+  <div
+    fxFlex="80"
+    fxLayout="row wrap"
+    fxLayoutAlign="start start"
+    class="mt-32"
+  >
+    <div
+      fxFlex="100"
+      fxLayoutGap="10"
+      fxLayout="row wrap"
+      fxLayoutAlign="start start"
+    >
+      <button mat-raised-button routerLink="" class="text-black mb-4">
+        Back
+      </button>
+    </div>
+
+    <div
+      fxFlex="100"
+      fxLayoutGap="10"
+      fxLayout="row wrap"
+      fxLayoutAlign="start start"
+      class="text-white"
+    >
+      <input
+        hidden
+        #fileUpload
+        type="file"
+        accept="image/*"
+        [multiple]="true"
+        (change)="handleUpload(fileUpload.files)"
+      />
+      <button
+        mat-raised-button
+        (click)="fileUpload.click()"
+        class="bg-green-300 text-sky-500 font-bold"
+      >
+        <div fxLayout="row wrap" fxLayoutAlign="center center">
+          <mat-icon class="mat-18">upload</mat-icon>
+          <span>Upload Logo</span>
+        </div>
+      </button>
+      <button
+      [disabled]="sloganForm.files && sloganForm.files.length==0 "
+        mat-raised-button
+        (click)="handleSubmit()"
+        class="bg-green-300 text-sky-500 font-bold"
+      >
+        <div fxLayout="row wrap" fxLayoutAlign="center center">
+          <mat-icon class="mat-18">done_all</mat-icon>
+          <span>Submit</span>
+        </div>
+      </button>
+
+      <div
+        *ngIf="sloganForm"
+        fxFlex="auto"
+        fxLayout="row wrap"
+        fxLayoutAlign="start center"
+        class=" p-3"
+      >
+        <img
+          *ngFor="let file of sloganForm.files; let i = index"
+          id="previewLogo"
+          style="width: max-content; height: max-content"
+        />
+      </div>
+    </div>
+  </div>
+</div>

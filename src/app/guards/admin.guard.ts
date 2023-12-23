@@ -14,10 +14,10 @@ export class AdminGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {
       if(this.$login.get()){
-        if(this.$login.get().auth_admin && this.$login.get().auth_admin == 'y'){
+        if(this.$login.get() =='admin'){
           return true
         }else{
-          this.router.navigate(['user'])
+          this.router.navigate([''])
         }
       }
     return false

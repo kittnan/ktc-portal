@@ -25,8 +25,6 @@ export class PortalComponent implements OnInit {
           data: resPortal.filter((b: any) => b.corporate == a)
         }
       })
-      console.log("🚀 ~ this.portals:", this.portals)
-      console.log("🚀 ~ unique:", unique)
     } catch (error) {
       console.log("🚀 ~ error:", error)
     }
@@ -34,6 +32,12 @@ export class PortalComponent implements OnInit {
 
   handleLink(url:string){
     window.open(url, '_blank');
+  }
+  htmlName(name:string){
+    if(name.length>18){
+      return name.slice(0, 18) +'..'
+    }
+    return name
   }
 
 }

@@ -17,6 +17,7 @@ import {
 import { MainComponent } from './pages/main/main.component';
 import { PortalComponent } from './pages/main/portal/portal.component';
 import { MenuComponent } from './pages/main/menu/menu.component';
+import { Carousel1Component } from './pages/main/carousel1/carousel1.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: '#673ab7',
@@ -27,17 +28,18 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   blur: 15,
   delay: 0,
   fastFadeOut: true,
-  fgsColor: '#673ab7',
+  fgsColor: 'rgb(255, 87, 87,0)',
   fgsPosition: 'center-center',
   fgsSize: 60,
   fgsType: 'ball-scale-multiple',
   gap: 5,
   logoPosition: 'center-center',
   logoSize: 200,
-  logoUrl: './assets/portalLOGO.png',
+  logoUrl: './assets/load4.gif',
+  // logoUrl: './assets/portalLOGO.png',
   masterLoaderId: 'master',
   overlayBorderRadius: '0',
-  overlayColor: 'rgba(255,255,255,0.6)',
+  overlayColor: 'rgba(255,255,255,0.7)',
   pbColor: '#000000',
   pbDirection: 'ltr',
   pbThickness: 3,
@@ -46,12 +48,13 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   textColor: '#FFFFFF',
   textPosition: 'center-center',
   maxTime: -1,
+  minTime:1000
 
 };
 
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, PortalComponent, MenuComponent],
+  declarations: [AppComponent, MainComponent, PortalComponent, MenuComponent, Carousel1Component],
   imports: [
     BrowserModule,
     AppRoutingModule,

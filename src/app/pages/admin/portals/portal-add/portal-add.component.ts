@@ -38,13 +38,10 @@ export class PortalAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.portalAddGroup.markAllAsTouched()
-    console.log(this.receivedData);
     if (this.receivedData) {
       this.portalAddGroup.patchValue({
         ...this.receivedData,
       })
-      console.log(this.portalAddGroup.value);
-
       setTimeout(() => {
         let preview: any = document.getElementById('previewLogo');
         preview.src = this.receivedData.logo[0]['path']
@@ -71,7 +68,7 @@ export class PortalAddComponent implements OnInit {
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
-      })).then(() => location.reload())
+      })).then(() => this.router.navigate(['admin']))
     } else {
       const resPortal = await lastValueFrom(this.$portal.createOrUpload(this.portalAddGroup.value))
       Swal.fire(({
@@ -79,7 +76,7 @@ export class PortalAddComponent implements OnInit {
         icon: 'success',
         showConfirmButton: false,
         timer: 1500
-      })).then(() => location.reload())
+      })).then(() => this.router.navigate(['admin']))
     }
 
 

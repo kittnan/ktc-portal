@@ -9,12 +9,14 @@ import { ShareComponentsModule } from 'src/app/share-components/share-components
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { SloganComponent } from './slogan/slogan.component';
 
 
 @NgModule({
   declarations: [
     PortalAddComponent,
-    PortalManageComponent
+    PortalManageComponent,
+    SloganComponent
   ],
   imports: [
     CommonModule,

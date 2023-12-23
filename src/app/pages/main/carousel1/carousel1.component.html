@@ -1,0 +1,38 @@
+<div fxLayout="row wrap" fxLayoutAlign="center start">
+  <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="start center">
+    <div
+    fxFlex="100"
+      id="carouselExampleAutoplaying"
+      class="carousel slide "
+      data-bs-ride="carousel"
+      style="height: max-content;"
+    >
+      <div *ngIf="slogans?.files" class="carousel-inner">
+        <ng-container *ngFor="let item of slogans.files; let i=index" >
+          <div data-bs-interval="10000" class="carousel-item" [ngClass]="{'active': i===0}">
+              <img [src]="item.path" class="d-block w-100" alt="..." />
+          </div>
+        </ng-container>
+
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
