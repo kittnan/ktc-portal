@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal, { SweetAlertResult } from 'sweetalert2';
 import { LoginService } from './services/login/login.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-root',

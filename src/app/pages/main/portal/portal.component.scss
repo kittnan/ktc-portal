@@ -21,3 +21,33 @@
   color: white;
   font-weight: 900;
 }
+
+
+.btn-custom{
+  position: relative;
+}
+.btn-custom::before,
+.btn-custom::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.btn-custom {
+  transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border: 2px solid #111;
+}
+
+.btn-custom:hover {
+  border: 2px solid #111;
+  box-shadow: 0px 0px 26px 8px hsla(133, 100%, 75%, 0.664);
+}
+.star-icon{
+  color: rgb(255, 242, 53);
+}
+.star-icon:hover{
+  z-index: 100;
+  cursor: pointer;
+  color: rgb(255, 242, 53);
+}

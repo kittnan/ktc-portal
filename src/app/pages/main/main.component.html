@@ -1,7 +1,22 @@
 <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center start">
-
-  <div fxFlex.gt-xs="100" fxFlex.gt-md="70" fxLayout="row wrap" fxLayoutAlign="center center" class="text-white">
+  <div
+    fxFlex.gt-xs="100"
+    fxFlex.gt-md="70"
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+    class="text-white"
+  >
     <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+
+      <div
+      fxFlex="90"
+      fxLayout="row wrap"
+      fxLayoutAlign="start start"
+      class="mt-8"
+    >
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, atque!
+    </div>
+
       <div
         fxFlex="90"
         fxLayout="row wrap"
@@ -22,11 +37,31 @@
     </div>
   </div>
 
-  <div fxFlex.gt-xs="100" fxFlex.gt-md="25" fxLayout="row wrap" fxLayoutAlign="center stretch" class="text-white bg-white mt-3">
-      <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center start" class="mt-8 mb-8">
-        <app-carousel1></app-carousel1>
-      </div>
-      <!-- <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center start" class="mt-8 mb-8">
+  <div
+    fxFlex.gt-xs="100"
+    fxFlex.gt-md="25"
+    fxLayout="row wrap"
+    fxLayoutAlign="center stretch"
+    class="text-white mt-3"
+  >
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="center start"
+      class="mt-8 mb-8 bg-white p-3"
+    >
+      <app-carousel1 [items]="slogans2"></app-carousel1>
+    </div>
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="center start"
+      class="mt-8 mb-8 bg-white"
+      style="height: max-content"
+    >
+      <app-carousel1 [items]="slogans"></app-carousel1>
+    </div>
+    <!-- <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center start" class="mt-8 mb-8">
         <app-carousel1></app-carousel1>
       </div>
       <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center start" class="mt-8 mb-8">

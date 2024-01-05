@@ -1,7 +1,4 @@
-import { HttpParams } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
-import { HttpSloganService } from 'src/app/https/http-slogan.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousel1',
@@ -10,15 +7,13 @@ import { HttpSloganService } from 'src/app/https/http-slogan.service';
 })
 export class Carousel1Component implements OnInit {
 
-  slogans: any = null
+  @Input() items:any
+  // @Input() id:any
   constructor(
-    private $slogan: HttpSloganService
   ) { }
 
   async ngOnInit(): Promise<void> {
     try {
-      const slogan1 = await lastValueFrom(this.$slogan.get(new HttpParams()))
-      this.slogans = slogan1[0]
     } catch (error) {
       console.log("🚀 ~ error:", error)
     }
